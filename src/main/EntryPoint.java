@@ -14,14 +14,12 @@ public class EntryPoint {
 		FileReader fr;
 		BufferedReader br;
 		try {
-			fr = new FileReader("D:\\workspace\\letters.txt");
-			br = new BufferedReader(fr);
-			
-			String line;
-			char[] chars = null;
-			while((line = br.readLine()) != null) {
-				chars = line.toCharArray();
-			}
+			char[] chars = {(char) Letters.A.getValue(), (char) Letters.B.getValue(), (char) Letters.C.getValue(), (char) Letters.D.getValue(), (char) Letters.E.getValue(), 
+					(char) Letters.F.getValue(), (char) Letters.G.getValue(), (char) Letters.H.getValue(), (char) Letters.I.getValue(), 
+					(char) Letters.J.getValue(), (char) Letters.K.getValue(), (char) Letters.L.getValue(), (char) Letters.M.getValue(), (char) Letters.N.getValue(), 
+					(char) Letters.O.getValue(), (char) Letters.P.getValue(), (char) Letters.Q.getValue(), (char) Letters.R.getValue(), 
+					(char) Letters.S.getValue(), (char) Letters.T.getValue(), (char) Letters.U.getValue(), (char) Letters.V.getValue(), (char) Letters.W.getValue(),
+					(char) Letters.X.getValue(), (char) Letters.Y.getValue(), (char) Letters.Z.getValue()};
 			
 			List<Vowel> vowels = new ArrayList<Vowel>();
 			List<Consonant> consonants = new ArrayList<Consonant>();
@@ -39,6 +37,24 @@ public class EntryPoint {
 					default:
 						consonants.add(new Consonant(c));
 						break;
+				}
+			}
+			
+			Map<Integer, String> map = new HashMap<Integer, String>();
+			for(Vowel v : vowels) {
+				if (v.getValue() == 'e' || v.getValue() == 'o') {
+					map.put(v, Character.toString(v.getValue()));
+				} else {
+					System.out.println("Got "+v+" instead.");
+				}
+			}
+			
+			Map<Integer, String> map2 = new HashMap<Integer, String>();
+			for (Consonant c : consonants) {
+				if () {
+					
+				} else {
+					System.out.println("Got "+c+" instead.");
 				}
 			}
 			
