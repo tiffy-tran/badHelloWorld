@@ -9,7 +9,11 @@ public class Consonant implements Letter {
 	}
 	
 	public char getValue() {
-		return (char) this.value;
+		return (char) value;
+	}
+	
+	public int getIntValue() {
+		return value;
 	}
 
 }
