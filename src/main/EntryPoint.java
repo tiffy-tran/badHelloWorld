@@ -48,7 +48,7 @@ public class EntryPoint {
 			Map<Integer, String> map2 = new HashMap<Integer, String>();
 			for (Consonant c : consonants) {
 				if (c.getValue() == 'h' || c.getValue() == 'l' || c.getValue() == 'w' || c.getValue() == 'r' || c.getValue() == 'd') {
-					map.put(new Integer(c.getIntValue()), Character.toString(c.getValue()));
+					map2.put(new Integer(c.getIntValue()), Character.toString(c.getValue()));
 				} else {
 					System.out.println("Got "+c+" instead.");
 				}
